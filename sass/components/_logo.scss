@@ -16,4 +16,7 @@
   margin-right: 0;
   padding-bottom: 20px;
   color: $primary-bg-color;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }

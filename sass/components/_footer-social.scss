@@ -1,11 +1,27 @@
 .footer-social {
-  padding-top: 12px;
-  margin-right: 95px;
+  width: 100%;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    padding-top: 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 206px;
+    padding-top: 12px;
+    margin-right: 93px;
+  }
 }
 
 .footer-social-links {
   @extend %list;
   display: flex;
+  justify-content: center;
 }
 .footer-social-links-item:not(:last-child) {
   margin-right: 10px;
