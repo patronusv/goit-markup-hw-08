@@ -1,0 +1,34 @@
+.client-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+.client-item {
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client-link {
+  @extend %hover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+}
+
+.client-icon {
+  fill: currentColor;
+}

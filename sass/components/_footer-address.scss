@@ -1,0 +1,32 @@
+.footer-address {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.address {
+  color: $primary-bg-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.address-list {
+  @extend %list;
+}
+.address-link {
+  @extend %link;
+  @extend %hover;
+  color: $footer-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.address-text {
+  display: block;
+  margin-bottom: 9px;
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}

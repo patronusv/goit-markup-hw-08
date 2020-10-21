@@ -1,0 +1,42 @@
+.section.occupation {
+  padding-top: 0;
+}
+.occupation-list {
+  @extend %list;
+  display: flex;
+}
+.occupation-item {
+  width: calc((100% - 60px) / 3);
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.occupation-link {
+  @extend %link;
+  display: block;
+}
+.occupation-picture {
+  display: block;
+}
+.occupation-item-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.occupation-item-caption-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-bg-color;
+}
