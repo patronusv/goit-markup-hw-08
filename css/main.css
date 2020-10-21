@@ -603,10 +603,6 @@ body {
   color: #212121;
 }
 
-.modal-form {
-  /* outline: 1px solid navy; */
-}
-
 .form-group, .form-group-comment {
   position: relative;
   margin-bottom: 28px;
@@ -735,10 +731,15 @@ body {
   color: #2196f3;
 }
 
+.submit-wrapper {
+  display: flex;
+}
+
 .modal-submit {
   display: block;
   margin: 0 auto;
-  padding: 10px 56px;
+  padding: 10px 16px;
+  flex-basis: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
