@@ -26,26 +26,62 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid navy; */
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .section-header {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  font-size: 28px;
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-header {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .page-header {
@@ -72,6 +108,7 @@ body {
 
 .footer-logo {
   display: block;
+  margin-right: 0;
   padding-bottom: 20px;
   color: #ffffff;
 }
@@ -152,8 +189,8 @@ body {
 .hero {
   display: block;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero.jpg);
   background-size: cover;
@@ -163,13 +200,27 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .hero-container {
-  max-width: 696px;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   /* outline: 1px solid navy; */
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    width: 1200px;
+    max-width: 696px;
+  }
 }
 
 .hero-title {
@@ -177,10 +228,17 @@ body {
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero-button {
@@ -203,16 +261,42 @@ body {
   background-color: #188ce8;
 }
 
-.advantages-list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages-item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
 }
 
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .advantages-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-item {
+    width: calc((100% - 1 * 30px) / 2);
+  }
+  .advantages-item:not(:nth-child(even)) {
+    margin-right: 30px;
+  }
+  .advantages-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-item {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+  .advantages-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantages-icon-container {
@@ -244,6 +328,12 @@ body {
 
 .section.occupation {
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .section.occupation {
+    display: none;
+  }
 }
 
 .occupation-list {
@@ -293,20 +383,47 @@ body {
   background-color: #f5f4fa;
 }
 
-.team-list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team-item {
-  padding-bottom: 30px;
-  width: calc((100% - 90px) / 4);
+  padding-bottom: 24px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-item {
+    width: calc((100% - 1 * 30px) / 2);
+  }
+  .team-item:not(:nth-child(even)) {
+    margin-right: 30px;
+  }
+  .team-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 3 * 30px) / 4);
+    padding-bottom: 30px;
+  }
+  .team-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team-photo {
@@ -366,16 +483,44 @@ body {
 
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .client-item {
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 1 * 30px) / 2);
   height: 90px;
 }
 
-.client-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .client-item:not(:nth-child(even)) {
+    margin-right: 30px;
+  }
+  .client-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  .client-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .client-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-item {
+    width: calc((100% - 5 * 30px) / 6);
+    padding-bottom: 30px;
+  }
+  .client-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .client-link {
@@ -405,6 +550,7 @@ body {
 
 .footer .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-call-to-action {
@@ -482,6 +628,7 @@ body {
 .form-group-footer {
   margin-right: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-subscribe-form {
@@ -553,7 +700,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  max-width: 528px;
+  width: 100%;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -628,8 +776,8 @@ body {
 }
 
 .modal-input {
-  padding: 12px 14px 12px 42px;
-  /* height: 40px; */
+  padding-left: 42px;
+  height: 40px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -739,7 +887,7 @@ body {
   display: block;
   margin: 0 auto;
   padding: 10px 16px;
-  flex-basis: 200px;
+  width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;

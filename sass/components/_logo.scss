@@ -13,6 +13,7 @@
 .footer-logo {
   @extend .logo;
   display: block;
+  margin-right: 0;
   padding-bottom: 20px;
   color: $primary-bg-color;
 }
