@@ -358,6 +358,12 @@ img {
   justify-content: center;
 }
 
+@media screen and (max-width: 1199px) {
+  .form-group-footer {
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer-subscribe-form {
     width: 100%;
@@ -376,6 +382,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer-subscribe-form {
+    width: calc(100% - 270px - 30px - 206px - 93px);
     padding-top: 12px;
   }
 }

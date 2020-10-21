@@ -4,8 +4,8 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    // width: 50%;
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
   }
 }
 .footer-subscribe-form {
@@ -23,7 +23,7 @@
     width: 50%;
   }
   @media screen and (min-width: 1200px) {
-    // width: 570px;
+    width: calc(100% - 270px - 30px - 206px - 93px);
     padding-top: 12px;
   }
 }
