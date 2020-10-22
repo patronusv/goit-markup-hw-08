@@ -10,6 +10,10 @@ body {
   color: $primary-text-color;
   font-family: $primary-font;
   letter-spacing: 0.03em;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 img {
