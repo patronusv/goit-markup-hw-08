@@ -3,7 +3,8 @@
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 1600px;
+  width: 100%;
+
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -11,10 +12,13 @@
   background-color: $dark-bg-color;
   text-align: center;
   @media screen and (min-width: 480px) {
+    max-width: 480px;
   }
   @media screen and (min-width: 768px) {
+    max-width: 768px;
   }
   @media screen and (min-width: 1200px) {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
