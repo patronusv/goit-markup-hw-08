@@ -823,10 +823,10 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 528px;
+  transform: translate(-50%, 0);
+  max-width: 450px;
   width: 100%;
   padding: 40px;
   background-color: #ffffff;
@@ -839,6 +839,19 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, 150%);
   opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .close-modal {
