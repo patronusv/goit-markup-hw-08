@@ -39,6 +39,9 @@
       max-width: 1199px;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/studio/hero-desktop@2x.jpg');
     }
+    @media screen and (min-width: 1200px) {
+      max-width: 1600px;
+    }
   }
 }
 .hero-container {

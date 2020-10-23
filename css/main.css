@@ -427,6 +427,12 @@ img {
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+  }
+}
+
 .hero-container {
   padding-left: 15px;
   padding-right: 15px;
